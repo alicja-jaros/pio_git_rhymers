@@ -74,5 +74,10 @@ public class RhymersJUnitTest {
         result = rhymer.countOut();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
-
+    @Test
+    public void shouldReturnLastAddedElement() {
+        DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+        rhymer.countIn(5);
+        Assert.assertEquals(5, rhymer.countOut());
+    }
 }
